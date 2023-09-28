@@ -1,12 +1,10 @@
 
 
-#Factorial of given number
-#!3 3 x 2 x 1
+#Print the Integral in a dictionary
 
-numberToFac = 8
-count = 1
+numberForInteg = 8
+dicToFill = dict()
 
-for i in reversed(range(1, numberToFac + 1)):
-    count *= i
+dicToFill.update({f'{i}' : f'{i * i}' for i in range(1, numberForInteg + 1)})
 
-print(count)
+print(dicToFill)

@@ -1,9 +1,12 @@
 
 
-number = input("Give me a Number ")
-userInt = int(number)
+#Factorial of given number
+#!3 3 x 2 x 1
 
-if userInt % 7 == 0 and userInt % 5 != 0:
-    print("success")
-else:
-    print("other")
+numberToFac = 8
+count = 1
+
+for i in reversed(range(1, numberToFac + 1)):
+    count *= i
+
+print(count)

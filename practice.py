@@ -1,10 +1,13 @@
 
 
-#Print the Integral in a dictionary
+#Get input of ints, comma seperated
+# Generate tuple and list
 
-numberForInteg = 8
-dicToFill = dict()
+value = input("Give me nums seperated by commas ")
+sep = value.split(",")
 
-dicToFill.update({f'{i}' : f'{i * i}' for i in range(1, numberForInteg + 1)})
+sepList = sep
+sepTuple = tuple(sep)
 
-print(dicToFill)
+print(sepList)
+print(sepTuple)

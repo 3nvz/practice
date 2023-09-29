@@ -1,13 +1,20 @@
 
 
-#Get input of ints, comma seperated
-# Generate tuple and list
+#Class with 2 Methods
+#Create Test cases
 
-value = input("Give me nums seperated by commas ")
-sep = value.split(",")
+class TestClass:
 
-sepList = sep
-sepTuple = tuple(sep)
 
-print(sepList)
-print(sepTuple)
+    def __init__(self):
+        pass
+
+    def getString(self):
+        self.s = input("Give me sth to say: ")
+        
+    def printString(self):
+        print(self.s)
+
+test = TestClass()
+test.getString()
+test.printString()

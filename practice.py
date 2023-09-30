@@ -1,18 +1,18 @@
 import math
 
-# 6
-# input into array
-# loop through array and perform math ops
-# append to array and print
+# 7
+# take the input of 2 numbers
+# generate 2 dimensional array
+# growing by number of outer array
 
-def mathOperation():
-    result = []
-    items = [int(x) for x in input("Give me comma seperated numbers: ").split(",")]
-    print(items)
-    for d in items:
-        result.append(str(math.floor(math.sqrt((2 * 50 * d)/30))))
-    
-    commaSepOutput = ','.join(result)
-    print(commaSepOutput)
+testNum1 = 3
+testNum2 = 5
+outerArr = []
 
-mathOperation()
+for i in range(0, testNum1):
+    innerArr = []
+    for j in range(0, testNum2):
+        innerArr.append(j * i)
+    outerArr.append(innerArr)
+
+print(outerArr)

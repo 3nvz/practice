@@ -1,18 +1,9 @@
 import math
 
-# 7
-# take the input of 2 numbers
-# generate 2 dimensional array
-# growing by number of outer array
+# 8 (easy)
+# mehtod to calculate square value of number
 
-testNum1 = 3
-testNum2 = 5
-outerArr = []
+def square(num):
+    return num ** 2
 
-for i in range(0, testNum1):
-    innerArr = []
-    for j in range(0, testNum2):
-        innerArr.append(j * i)
-    outerArr.append(innerArr)
-
-print(outerArr)
+print(square(3))

@@ -1,9 +1,11 @@
 import math
 
-# 8 (easy)
-# mehtod to calculate square value of number
+# 8 
+# comma sep input strings
+# sort them alphabetically
+# print them comma seperated
 
-def square(num):
-    return num ** 2
+words = [x for x in input().split(',')]
+words.sort()
 
-print(square(3))
+print(','.join(words))

@@ -1,11 +1,19 @@
 import math
 
-# 8 
-# comma sep input strings
-# sort them alphabetically
-# print them comma seperated
+# 9
+# Accept sequenece of lines as input
+# output all capital
 
-words = [x for x in input().split(',')]
-words.sort()
+lines = []
 
-print(','.join(words))
+while True:
+    inputToCapitalize = input()
+
+    if inputToCapitalize:
+        lines.append(inputToCapitalize.upper())
+    else:
+        break
+
+for sentence in lines:
+    print(sentence)
+

@@ -1,19 +1,12 @@
 import math
 
-# 9
-# Accept sequenece of lines as input
-# output all capital
+# 10
+# input words seperated with whitespaces
+# remove duplicates and output sorted alphabetically
 
-lines = []
+i = input()
+words = [x for x in i.split()]
+words.sort()
 
-while True:
-    inputToCapitalize = input()
-
-    if inputToCapitalize:
-        lines.append(inputToCapitalize.upper())
-    else:
-        break
-
-for sentence in lines:
-    print(sentence)
+print(" ".join(words))
 

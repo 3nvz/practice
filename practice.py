@@ -1,16 +1,14 @@
 import math
 
-# 11
-# input binary numbers comma seperated
-# output binary number that is dividable by 5
+# 12
+# take numbers from range 2000 to 3000
+# print nums where all digits are even
 
-numbers = [x for x in input("Give me binary numbers: ").split(",")]
-result = []
+results = []
 
-for num1 in numbers:
-    converted = int(num1, 2)
-    
-    if converted % 5 == 0:
-        result.append(converted)
-    
-print(result)
+for i in range(2000, 3001):
+    s = str(i)
+    if int(s[0]) % 2 == 0 and int(s[1]) % 2 == 0 and int(s[2]) % 2 == 0 and int(s[3]) % 2 == 0:
+        results.append(s)
+
+print(','.join(results))

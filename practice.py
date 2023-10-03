@@ -1,12 +1,16 @@
 import math
 
-# 10
-# input words seperated with whitespaces
-# remove duplicates and output sorted alphabetically
+# 11
+# input binary numbers comma seperated
+# output binary number that is dividable by 5
 
-i = input()
-words = [x for x in i.split()]
-words.sort()
+numbers = [x for x in input("Give me binary numbers: ").split(",")]
+result = []
 
-print(" ".join(words))
-
+for num1 in numbers:
+    converted = int(num1, 2)
+    
+    if converted % 5 == 0:
+        result.append(converted)
+    
+print(result)

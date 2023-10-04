@@ -1,19 +1,18 @@
 import math
 
-# 13
-# accepts a setence with letters and digits
-# calculate number of letters and digits
+# 14
+# accepts a sentence
+# calculate number of upper and lower case letters
 
-sentence = [x for x in input("Give me a sentence: ").split()]
-countLetter = 0
-countDigit = 0
+sentence = input("Give me a sentence: ")
+countUpper = 0
+countLower = 0
 
-for word in sentence:
-    for i in range(0, len(word)):
-        if word[i].isalpha():
-            countLetter += 1
-        elif word[i].isdigit():
-            countDigit += 1
+for letter in sentence:
+    if letter.isupper():
+        countUpper += 1
+    elif letter.islower():
+        countLower += 1
 
-print("Number of letters: ", countLetter)
-print("Number of digits: ", countDigit)
+print("Number of upper case letter: ", countUpper)
+print("Number of lower case letter: ", countLower)

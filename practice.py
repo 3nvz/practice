@@ -1,18 +1,13 @@
 import math
 
-# 14
-# accepts a sentence
-# calculate number of upper and lower case letters
+# 16
+# comma seperated input of ints saved in a list
+# output all odd ints comma seperated
 
-sentence = input("Give me a sentence: ")
-countUpper = 0
-countLower = 0
+numbers = [int(x) for x in input("Give me comma seperated numbers: ").split(",")]
+results = []
 
-for character in sentence:
-    if character.isupper():
-        countUpper += 1
-    elif character.islower():
-        countLower += 1
-
-print("Number of upper case characters: ", countUpper)
-print("Number of lower case characters: ", countLower)
+for num in numbers:
+    if num % 2 != 0:
+        results.append(str(num))
+print(','.join(results))

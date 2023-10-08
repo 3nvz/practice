@@ -1,11 +1,12 @@
 import math
 
-# 23
-# Method to calculate the square number of an int
+# 2.14
+# accept the string "yes" in any variations as input
+# otherwise print no
 
-def square(num):
-    return num**2
+yes = input("Give me a yes: ").upper()
 
-print(square(2))
-print(square(4))
-print(square(5))
+if yes == "YES":
+    print("You gave me a 'yes'!")
+else:
+    print("no")

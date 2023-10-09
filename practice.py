@@ -1,12 +1,12 @@
 import math
 
-# 2.14
-# accept the string "yes" in any variations as input
-# otherwise print no
+# Accept strings, but only print numbers
 
-yes = input("Give me a yes: ").upper()
+s = [x for x in input("Give me sth: ").split()]
+result = []
 
-if yes == "YES":
-    print("You gave me a 'yes'!")
-else:
-    print("no")
+for i in s:
+    if i.isdigit():
+        result.append(i)
+
+print(result)

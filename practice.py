@@ -1,12 +1,8 @@
 import math
+import random
 
-# Accept strings, but only print numbers
+# generate a random float with math module
 
-s = [x for x in input("Give me sth: ").split()]
-result = []
-
-for i in s:
-    if i.isdigit():
-        result.append(i)
-
-print(result)
+for i in range(1, 10):
+    ranFloat = random.uniform(0, 100)
+    print(ranFloat)

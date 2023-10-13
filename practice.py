@@ -1,8 +1,7 @@
 import math
 import random
 
-# generate a random float with math module
+# trying usage of assert
 
-for i in range(1, 10):
-    ranFloat = random.uniform(0, 100)
-    print(ranFloat)
+test = 5
+assert test > 10, "not bigger than 10"

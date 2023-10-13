@@ -3,5 +3,5 @@ import random
 
 # trying usage of assert
 
-test = 5
-assert test > 10, "not bigger than 10"
+for i in range(1, 20):  
+    assert i % 2 == 0, f"{i} is not even"

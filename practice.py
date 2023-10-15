@@ -1,7 +1,10 @@
 import math
 import random
 
-# trying usage of assert
+# list comprehension exercise
 
-for i in range(1, 20):  
-    assert i % 2 == 0, f"{i} is not even"
+list = [12,24,35,70,88,120,155]
+
+result = [x for x in list if x % 5 == 0 and x % 7 == 0]
+
+print(result)

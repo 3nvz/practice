@@ -1,10 +1,9 @@
 import math
 import random
 
-# list comprehension exercise
+# a function to concatinate strings
 
-list = [12,24,35,70,88,120,155]
+def concatStrings(s1, s2):
+    print(s1 + " " + s2)
 
-result = [x for x in list if x % 5 == 0 and x % 7 == 0]
-
-print(result)
+concatStrings("I got", "CONCATINATED!")

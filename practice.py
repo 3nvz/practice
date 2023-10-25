@@ -1,9 +1,7 @@
-import math
-import random
+
+y = "lz"
 
 # a function to concatinate strings
+x = "hello" < "he" + y
 
-x = 2
-y = 7
-z = True
-print(x, y, z)
+print(x)

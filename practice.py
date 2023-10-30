@@ -1,4 +1,9 @@
 
-var = "algoexpert".upper().replace("o", "i").capitalize().lower().split("e")
+result = {}
+s = input("Enter a string: ")
 
-print("foo".join(var))
+for char in s:
+    result[char] = result.get(char, 0) + 1
+
+for key in result:
+    print(f"{key}: {result[key]}")

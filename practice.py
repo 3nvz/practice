@@ -1,6 +1,13 @@
 
-set1 = {1, 2, 3, 4, 5, 6}
-set2 = {2, 4, 5, 6, 7}
-x = set1 ^ set2
+chars = set()
+count = 0
 
-print(x)
+while True:
+    char = input("Enter a character: ")
+
+    if char in chars or len(char) > 1:
+        print(f"Number of unique characters entered: {count}")
+        break
+
+    chars.add(char)
+    count += 1

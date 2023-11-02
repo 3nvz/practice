@@ -1,13 +1,24 @@
 
-chars = set()
-count = 0
+num = input("Enter the numerator: ")
+den = input("Enter the denominator: ")
 
-while True:
-    char = input("Enter a character: ")
+try:
+    num = float(num)
+except Exception as e:
+    print("The numerator is not a number.")
 
-    if char in chars or len(char) > 1:
-        print(f"Number of unique characters entered: {count}")
-        break
+try:
+    den = float(den)
+except Exception as e:
+    print("The denominator is not a number.")
 
-    chars.add(char)
-    count += 1
+try:
+    result = num / den
+    print(f"The result of this division is {result}. ")
+except ZeroDivisionError:
+    print("You cannot divide by 0.")
+    print("This division cannot be performed.")
+except Exception as e:
+    print("This division cannot be performed.")
+finally:
+    print("Goodbye!")

@@ -1,9 +1,6 @@
 
-result = {}
-s = input("Enter a string: ")
+set1 = {1, 2, 3, 4, 5, 6}
+set2 = {2, 4, 5, 6, 7}
+x = set1 ^ set2
 
-for char in s:
-    result[char] = result.get(char, 0) + 1
-
-for key in result:
-    print(f"{key}: {result[key]}")
+print(x)

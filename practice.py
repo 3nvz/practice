@@ -1,24 +1,11 @@
 
-num = input("Enter the numerator: ")
-den = input("Enter the denominator: ")
+lst = ["world", "is", "great", "world", "is", "world"]
 
-try:
-    num = float(num)
-except Exception as e:
-    print("The numerator is not a number.")
+def replace(lst, target, swap_value):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            lst[i] = swap_value
+    return lst
 
-try:
-    den = float(den)
-except Exception as e:
-    print("The denominator is not a number.")
-
-try:
-    result = num / den
-    print(f"The result of this division is {result}. ")
-except ZeroDivisionError:
-    print("You cannot divide by 0.")
-    print("This division cannot be performed.")
-except Exception as e:
-    print("This division cannot be performed.")
-finally:
-    print("Goodbye!")
+replace(lst, "world", "python")
+print(lst)

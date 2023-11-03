@@ -1,11 +1,11 @@
 
-lst = ["world", "is", "great", "world", "is", "world"]
+x = "global"
 
-def replace(lst, target, swap_value):
-    for i in range(len(lst)):
-        if lst[i] == target:
-            lst[i] = swap_value
-    return lst
+def foo():
+    global x
+    print(x, end=",")
+    x = "local"
+    print(x, end=",")
 
-replace(lst, "world", "python")
-print(lst)
+foo()
+print(x, end="")

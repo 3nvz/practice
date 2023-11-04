@@ -1,11 +1,5 @@
 
-x = "global"
+lst = [3, 4, 2, -1, 2] 
 
-def foo():
-    global x
-    print(x, end=",")
-    x = "local"
-    print(x, end=",")
-
-foo()
-print(x, end="")
+lst.sort(reverse=True)
+print(lst)

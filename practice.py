@@ -1,5 +1,4 @@
+people = {"Tim": 21, "Joe": 18, "Sarah": 25, "Jennie": 26, "Bill": 34}
 
-lst = [3, 4, 2, -1, 2] 
-
-lst.sort(reverse=True)
-print(lst)
+result = sorted(people, key=people.get)
+print(result)

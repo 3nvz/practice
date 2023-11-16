@@ -1,10 +1,20 @@
-class ContactInformation:
-    def __init__(self, first_name, last_name, email, phone_number):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.email = email
-        self.phone_number = phone_number
-        self.country = None
+class Rectangle:
+    def __init__(self, x, y, width, height):
+        self.x = x
+        self.y = y
+        self.width = width
+        self.height = height
 
-person1 = ContactInformation("John", "Doe", "test@gmail.com", "123456789")
-person2 = ContactInformation("Jane", "Doe", "test2@gmail.com", "987654321")
+    # Write your code here
+    def change_position(self, x, y):
+        self.x = x
+        self.y = y
+
+    def get_position(self):
+        return self.x, self.y
+
+    def get_area(self):
+        return self.width * self.height
+    
+rec1 = Rectangle(0, 0, 10, 20)
+print(rec1.get_area())

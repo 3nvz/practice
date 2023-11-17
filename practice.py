@@ -1,20 +1,29 @@
-class Rectangle:
-    def __init__(self, x, y, width, height):
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
+class Group:
+    def __init__(self, name, members=[]):
+        self.name = name
+        self.members = members
 
     # Write your code here
-    def change_position(self, x, y):
-        self.x = x
-        self.y = y
+    def add_member(self, member):
+        self.members.append(member)
 
-    def get_position(self):
-        return self.x, self.y
+    def delete_member(self, name):
+        if name in self.members:
+            self.members.remove(name)
+        else:
+            raise Exception("Member does not exist")
 
-    def get_area(self):
-        return self.width * self.height
-    
-rec1 = Rectangle(0, 0, 10, 20)
-print(rec1.get_area())
+    def get_members(self):
+        return sorted(self.members)
+
+
+group1 = Group("Justice League")
+group1.add_member("Zion")
+group1.add_member("Batman")
+group1.add_member("Robin")
+group1.add_member("Superman")
+
+group1.delete_member("Robin")
+print(group1.get_members())
+print(group1.name)
+

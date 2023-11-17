@@ -1,29 +1,19 @@
-class Group:
-    def __init__(self, name, members=[]):
-        self.name = name
-        self.members = members
+class BankAccount:
+    def __init__(self, account_holder_name):
+        self.account_holder_name = account_holder_name
+        self._balance = 0
 
-    # Write your code here
-    def add_member(self, member):
-        self.members.append(member)
-
-    def delete_member(self, name):
-        if name in self.members:
-            self.members.remove(name)
+    def set_balance(self, balance):
+        if isinstance(balance, int) and balance > 0 and balance < 100000:
+            self._balance = balance
         else:
-            raise Exception("Member does not exist")
+            raise Exception("Balance must be positive")
+    
+    def get_balance(self):
+        return self._balance
+    
 
-    def get_members(self):
-        return sorted(self.members)
-
-
-group1 = Group("Justice League")
-group1.add_member("Zion")
-group1.add_member("Batman")
-group1.add_member("Robin")
-group1.add_member("Superman")
-
-group1.delete_member("Robin")
-print(group1.get_members())
-print(group1.name)
+bA1 = BankAccount("John")
+bA1.set_balance(-100)
+print(bA1.get_balance())
 

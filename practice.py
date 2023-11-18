@@ -16,7 +16,7 @@ class BankAccount:
             raise Exception("Balance must be positive")
     
 
-bA1 = BankAccount("John")
+bA1 = BankAccount("ljol")
 bA1.balance = 100
 print(bA1.balance)
 

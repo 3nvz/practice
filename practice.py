@@ -1,22 +1,16 @@
-class BankAccount:
-    def __init__(self, account_holder_name):
-        self.account_holder_name = account_holder_name
-        self._balance = 0
-
-
-    @property
-    def balance(self):
-        return self._balance
-
-    @balance.setter
-    def balance(self, balance):
-        if isinstance(balance, int) and balance > 0 and balance < 100000:
-            self._balance = balance
-        else:
-            raise Exception("Balance must be positive")
+class Employee:
+    # Write your code here
+    number_of_employees = 0
+    average_age = 0
+    average_salary = 0
     
+    def __init__(self, name, age, salary):
+        self.name = name
+        self.age = age
+        self.salary = salary
 
-bA1 = BankAccount("ljol")
-bA1.balance = 100
-print(bA1.balance)
-
+        total_age = Employee.average_age * Employee.number_of_employees
+        total_salary = Employee.average_salary * Employee.number_of_employees
+        Employee.average_age = (total_age + age) / (Employee.number_of_employees + 1)
+        Employee.average_salary = (total_salary + salary) / (Employee.number_of_employees + 1)
+        Employee.number_of_employees += 1

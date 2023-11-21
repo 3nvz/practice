@@ -1,16 +1,24 @@
-class Employee:
+class Physics:
     # Write your code here
-    number_of_employees = 0
-    average_age = 0
-    average_salary = 0
-    
-    def __init__(self, name, age, salary):
-        self.name = name
-        self.age = age
-        self.salary = salary
 
-        total_age = Employee.average_age * Employee.number_of_employees
-        total_salary = Employee.average_salary * Employee.number_of_employees
-        Employee.average_age = (total_age + age) / (Employee.number_of_employees + 1)
-        Employee.average_salary = (total_salary + salary) / (Employee.number_of_employees + 1)
-        Employee.number_of_employees += 1
+    @staticmethod
+    def calculate_net_force(mass, acceleration):
+        if mass < 0 or acceleration < 0:
+            return 0.0
+        
+        return mass * acceleration
+
+    @staticmethod
+    def calculate_acceleration(mass, net_force):
+        if mass <= 0 or net_force < 0:
+            return 0.0
+        
+        return net_force / mass
+        
+
+    @staticmethod
+    def calculate_mass(net_force, acceleration):
+        if acceleration <= 0 or net_force < 0:
+            return 0.0
+        
+        return net_force / acceleration

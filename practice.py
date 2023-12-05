@@ -1,34 +1,15 @@
-#modified
 class Animal:
-    def __init__(self, age, weight, height):
-        self.age = age
-        self.weight = weight
-        self.height = height
+    def sleep(self):
+        print("ZzzZzz")
+
+    def animal_sound(self):
+        raise NotImplementedError("Method not implemented.")
+
+    def wake_up(self):
+        self.animal_sound()
+        print("I am awake!")
 
 
-class Mammal(Animal):
-    def __init__(self, age, weight, height, sex):
-        super().__init__(age, weight, height)
-        self.sex = sex
-
-
-class Reptile(Animal):
-    def __init__(self, age, weight, height, legs):
-        super().__init__(age, weight, height)
-        self.legs = legs
-
-
-class Monkey(Mammal):
-    fingers = 5
-
-    def __init__(self, age, weight, height, sex, color):
-        super().__init__(age, weight, height, sex)
-        self.color = color
-
-
-class Lizard(Reptile):
-    tail = True
-
-    def __init__(self, age, weight, height, legs, color):
-        super().__init__(age, weight, height, legs)
-        self.color = color
+class Lion(Animal):
+    def animal_sound(self):
+        print("Roar!")

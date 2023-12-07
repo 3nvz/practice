@@ -1,15 +1,20 @@
-class Animal:
-    def sleep(self):
-        print("ZzzZzz")
-
-    def animal_sound(self):
-        raise NotImplementedError("Method not implemented.")
-
-    def wake_up(self):
-        self.animal_sound()
-        print("I am awake!")
+import math
 
 
-class Lion(Animal):
-    def animal_sound(self):
-        print("Roar!")
+class ShapeInterface:
+    def get_area(self):
+        raise NotImplementedError
+
+    def get_perimeter(self):
+        raise NotImplementedError
+
+
+class Square(ShapeInterface):
+    def __init__(self, side_length):
+        self.side_length = side_length
+
+    def get_area(self):
+        return self.side_length * self.side_length
+
+    def get_perimeter(self):
+        return self.side_length * 4

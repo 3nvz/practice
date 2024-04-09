@@ -1,20 +1,11 @@
-import math
 
+nums = [1,2,3]
+new = set(nums)
 
-class ShapeInterface:
-    def get_area(self):
-        raise NotImplementedError
+if len(new) < len(nums):
+    print(True)
+else:    
+    print(False)
 
-    def get_perimeter(self):
-        raise NotImplementedError
+print(set(nums))
 
-
-class Square(ShapeInterface):
-    def __init__(self, side_length):
-        self.side_length = side_length
-
-    def get_area(self):
-        return self.side_length * self.side_length
-
-    def get_perimeter(self):
-        return self.side_length * 4

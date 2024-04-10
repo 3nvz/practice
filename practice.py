@@ -1,16 +1,29 @@
 
-s = "anagram"
-t = "nagaram"
 
-dic = {"a", "b", "c", "a"}
+nums = [3,2,3] 
+target = 6
+result = []
 
-countS, countT = {}, {}
+mapMeBaby = {}
+counter = 0
 
-if len(s) != len(t):
-    print(False)
+for i, v in enumerate(nums):
+    diff = target - v
     
+    print("Value: ", v)
+    print("Index: ", i)
+    print("Difference: ", diff)
 
-for i in range(len(s)):
-    countS[s[i]] = 1 + countS.get(s[i], 0)
-    countT[t[i]] = 1 + countT.get(t[i], 0)
-    print(countS)
+    counter = counter + 1
+
+    print(mapMeBaby, " Inside for")
+
+    if diff in mapMeBaby:
+        print(mapMeBaby[diff], i, " Inside if")
+        print("Hit", counter)
+    mapMeBaby[v] = i
+    print("Map at the end of loop", mapMeBaby)
+
+
+print("Last print", mapMeBaby)
+

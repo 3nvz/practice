@@ -1,11 +1,16 @@
 
-nums = [1,2,3]
-new = set(nums)
+s = "anagram"
+t = "nagaram"
 
-if len(new) < len(nums):
-    print(True)
-else:    
+dic = {"a", "b", "c", "a"}
+
+countS, countT = {}, {}
+
+if len(s) != len(t):
     print(False)
+    
 
-print(set(nums))
-
+for i in range(len(s)):
+    countS[s[i]] = 1 + countS.get(s[i], 0)
+    countT[t[i]] = 1 + countT.get(t[i], 0)
+    print(countS)

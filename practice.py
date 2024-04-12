@@ -1,29 +1,15 @@
 
 
-nums = [3,2,3] 
-target = 6
-result = []
-
-mapMeBaby = {}
-counter = 0
-
-for i, v in enumerate(nums):
-    diff = target - v
-    
-    print("Value: ", v)
-    print("Index: ", i)
-    print("Difference: ", diff)
-
-    counter = counter + 1
-
-    print(mapMeBaby, " Inside for")
-
-    if diff in mapMeBaby:
-        print(mapMeBaby[diff], i, " Inside if")
-        print("Hit", counter)
-    mapMeBaby[v] = i
-    print("Map at the end of loop", mapMeBaby)
+import collections
 
 
-print("Last print", mapMeBaby)
+strs = ["eat","tea","tan","ate","nat","bat"]
 
+ans = collections.defaultdict(list)
+
+for s in strs:
+    count = [0] * 26
+    for c in s:
+        count[ord(c) - ord("a")] += 1
+    ans[tuple(count)].append(s)
+    print(ans)

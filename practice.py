@@ -1,15 +1,6 @@
 
+from collections import Counter
 
-import collections
+arr = [1, 3, 5, 3, 7, 9, 3]
 
-
-strs = ["eat","tea","tan","ate","nat","bat"]
-
-ans = collections.defaultdict(list)
-
-for s in strs:
-    count = [0] * 26
-    for c in s:
-        count[ord(c) - ord("a")] += 1
-    ans[tuple(count)].append(s)
-    print(ans)
+print(arr.count(3))

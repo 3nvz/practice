@@ -1,20 +1,16 @@
 
-nested_list = [['blue', 3], ['red', 3], ['blue', 4], ['blue', 7], ['blue', 6], ['blue', 1], ['blue', 5]]
+grades = {
+    "Krishna": [67, 68, 69],
+    "Arjun": [70, 98, 63],
+    "Malika": [52, 56, 60]
+}
 
-scores = set()
-result = []
+student = grades.get("Malika")
+gradesAdded, averageGrade = 0, 0
 
-for i in range(len(nested_list)):
-    scores.add(nested_list[i][1])
-secondLowestScore = sorted(scores)[1]
+for grade in student:
+    gradesAdded += grade
 
+averageGrade = gradesAdded/len(student)
 
-for j in range(len(nested_list)):
-    if nested_list[j][1] == secondLowestScore:
-        result.append(nested_list[j])
-    
-result.sort()
-print("Result", result)
-
-
-print(scores)
+print("{:.2f}".format(averageGrade))

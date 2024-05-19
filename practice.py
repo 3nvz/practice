@@ -12,3 +12,5 @@ for i in range(len(arr)):
     print(arr[i][-i-1])
 
 print(sumi)
+
+#did some react stuff today
